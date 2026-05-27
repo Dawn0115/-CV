@@ -533,6 +533,87 @@ ul { margin: 0; padding: 0; list-style: none; }
     text-transform: uppercase;
 }
 
+/* ---------- Portfolio card ---------- */
+
+.work-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+    padding: clamp(20px, 3vw, 32px);
+    border: 1px solid var(--line-soft);
+    background: var(--paper);
+    transition: border-color .35s ease, transform .35s ease, box-shadow .35s ease;
+}
+
+.work-card:hover {
+    border-color: var(--ink);
+    transform: translateY(-3px);
+    box-shadow: 0 24px 60px rgba(28,28,26,0.08);
+}
+
+.work-card-img {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: var(--bg-soft);
+}
+
+.work-card-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .9s cubic-bezier(0.2,0.7,0.2,1);
+}
+
+.work-card:hover .work-card-img img { transform: scale(1.04); }
+
+.work-card-eyebrow {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 14px;
+}
+
+.work-card-title {
+    font-family: var(--serif-cn);
+    font-weight: 500;
+    font-size: clamp(20px, 2.6vw, 26px);
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin: 0 0 18px;
+}
+
+.work-card-desc {
+    font-size: 14.5px;
+    line-height: 1.95;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+    max-width: 52ch;
+}
+
+.work-card-cta {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 3px;
+    transition: border-color .3s ease;
+}
+
+.work-card:hover .work-card-cta { border-bottom-color: var(--ink); }
+
+@media (max-width: 720px) {
+    .work-card { grid-template-columns: 1fr; }
+    .work-card-img { max-width: 280px; }
+}
+
 /* ---------- Honors ---------- */
 
 .honor-list {
