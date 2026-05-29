@@ -812,6 +812,40 @@ ul { margin: 0; padding: 0; list-style: none; }
     border-bottom-color: var(--ink);
 }
 
+.contact-extra {
+    list-style: none;
+    margin: 28px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-extra li {
+    font-family: var(--serif-cn);
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+}
+
+.contact-extra li span {
+    color: var(--ink-mute);
+    margin-right: 14px;
+    letter-spacing: 0.24em;
+}
+
+.contact-extra a {
+    color: var(--ink-soft);
+    border-bottom: 1px solid transparent;
+    transition: color .3s ease, border-color .3s ease;
+}
+
+.contact-extra a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
 .contact-loc {
     margin: 36px 0 0;
     font-size: 12px;
