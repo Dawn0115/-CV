@@ -689,6 +689,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .mini-img:hover img { object-position: bottom; }
 
+/* 近正方形截图：完整显示，不裁切左右 */
+.mini-img--contain {
+    background: #fff;
+}
+.mini-img--contain img {
+    object-fit: contain;
+    object-position: top center;
+    transition: none;
+}
+.mini-img--contain:hover img { object-position: top center; }
+
 .mini-img--placeholder {
     display: flex;
     align-items: center;
