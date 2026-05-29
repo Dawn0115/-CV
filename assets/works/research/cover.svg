@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1040" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EEE9DD"/>
+      <stop offset="1" stop-color="#DDD7C6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1040" fill="url(#bg)"/>
+  <g fill="none" stroke="#1C1C1A" stroke-width="1">
+    <line x1="80" y1="120" x2="720" y2="120"/>
+    <line x1="80" y1="920" x2="720" y2="920"/>
+  </g>
+  <g font-family="'Noto Serif SC', 'Songti SC', serif" fill="#1C1C1A">
+    <text x="80" y="200" font-size="22" letter-spacing="6">城 市 书 房 · 田 野 调 研</text>
+    <text x="80" y="510" font-size="120" font-weight="600" letter-spacing="20">堇</text>
+    <text x="240" y="510" font-size="120" font-weight="600" letter-spacing="20">书</text>
+    <text x="400" y="510" font-size="120" font-weight="600" letter-spacing="20">房</text>
+    <text x="80" y="610" font-size="20" fill="#6E6B62" letter-spacing="8">City Reading Room · Field Research</text>
+    <text x="80" y="900" font-size="16" fill="#3A3A36" letter-spacing="4">宁 波 · 鄞 州 区 · 2024</text>
+  </g>
+</svg>

@@ -18,11 +18,11 @@
 .work-eyebrow {
     font-family: var(--serif-en);
     font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--ink-mute);
-    margin: 0 0 32px;
+    color: var(--ink-soft);
+    margin: 0 0 36px;
 }
 
 .work-title {
@@ -39,10 +39,10 @@
 .work-subtitle {
     font-family: var(--serif-en);
     font-style: italic;
-    font-size: clamp(16px, 2.4vw, 24px);
-    letter-spacing: 0.14em;
-    color: var(--ink-mute);
-    margin: 18px 0 48px;
+    font-size: clamp(18px, 2.6vw, 26px);
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin: 22px 0 52px;
 }
 
 .work-facts {
@@ -55,20 +55,21 @@
 .work-facts li {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding-bottom: 14px;
+    gap: 8px;
+    padding-bottom: 16px;
     border-bottom: 1px dashed var(--line-soft);
-    font-size: 14.5px;
+    font-family: var(--serif-cn);
+    font-size: 16px;
+    font-weight: 400;
     color: var(--ink);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
 }
 
 .work-facts li span {
-    font-family: var(--serif-en);
-    font-style: italic;
-    font-size: 12px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    font-family: var(--serif-cn);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
     color: var(--ink-mute);
 }
 
@@ -98,33 +99,36 @@
 
 .work-grid-label {
     font-family: var(--serif-cn);
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 0.14em;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0.08em;
     color: var(--ink);
     height: fit-content;
     position: sticky;
     top: 96px;
+    line-height: 1.3;
 }
 
 .work-grid-label span {
     display: block;
     font-family: var(--serif-en);
     font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--ink-mute);
-    letter-spacing: 0.18em;
-    margin-bottom: 10px;
+    letter-spacing: 0.22em;
+    margin-bottom: 14px;
 }
 
 .work-grid-label em {
+    display: block;
     font-family: var(--serif-en);
     font-style: italic;
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 15px;
     color: var(--ink-mute);
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    margin-top: 4px;
 }
 
 @media (max-width: 760px) {
@@ -133,27 +137,27 @@
 
 .work-lead {
     font-family: var(--serif-cn);
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 2.05;
-    letter-spacing: 0.07em;
-    color: var(--ink-soft);
+    font-size: 17.5px;
+    font-weight: 400;
+    line-height: 1.95;
+    letter-spacing: 0.02em;
+    color: var(--ink);
     margin: 0;
-    max-width: 60ch;
+    max-width: 38em;
 }
 
 .work-note {
-    margin: 28px 0 0;
-    font-size: 13px;
-    line-height: 1.9;
-    letter-spacing: 0.04em;
-    color: var(--ink-mute);
-    max-width: 60ch;
+    margin: 32px 0 0;
+    font-size: 14px;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    max-width: 38em;
     padding-left: 18px;
-    border-left: 1px solid var(--line);
+    border-left: 2px solid var(--line);
 }
 
-.work-grid-body--wide .work-lead { max-width: 72ch; }
+.work-grid-body--wide .work-lead { max-width: 44em; }
 
 /* ---------- Plates ---------- */
 
@@ -188,35 +192,259 @@
 
 .plate-img:hover img { transform: scale(1.03); }
 
+.plate-img--auto { aspect-ratio: auto; }
+.plate-img--auto img { height: auto; }
+
 .plate figcaption {
-    margin-top: 20px;
+    margin-top: 24px;
     padding-left: 2px;
 }
 
 .plate-no {
     display: inline-block;
-    font-family: var(--serif-en);
-    font-style: italic;
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--line-soft);
+    font-family: var(--serif-cn);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid var(--line);
 }
 
 .plate figcaption p {
     margin: 0;
-    font-size: 14px;
+    font-family: var(--serif-cn);
+    font-size: 15px;
+    font-weight: 400;
     line-height: 1.9;
-    letter-spacing: 0.04em;
-    color: var(--ink-soft);
-    max-width: 46ch;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    max-width: 32em;
 }
 
 @media (max-width: 680px) {
     .plates { grid-template-columns: 1fr; }
+}
+
+/* ---------- Film stage & story acts (work-film) ---------- */
+
+.film-stage {
+    margin: clamp(48px, 7vw, 88px) auto 0;
+    max-width: 1040px;
+    background: #14110d;
+    border: 1px solid var(--line-soft);
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.film-stage video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    background: #14110d;
+}
+
+.plates--two { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 680px) {
+    .plates--two { grid-template-columns: 1fr; }
+}
+
+.story-acts {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 38em;
+}
+
+.story-acts > div {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 18px;
+    align-items: baseline;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--line-soft);
+    font-family: var(--serif-cn);
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+}
+
+.story-acts > div span {
+    font-weight: 600;
+    color: var(--ink-mute);
+    letter-spacing: 0.12em;
+}
+
+/* ---------- WeChat 她说 page ---------- */
+
+.logo-card {
+    margin-top: 40px;
+    padding: 32px 28px;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 280px;
+}
+
+.logo-card img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.logo-card span {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+.columns-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 36px;
+}
+
+@media (max-width: 760px) {
+    .columns-grid { grid-template-columns: 1fr; }
+}
+
+.columns-grid > div {
+    padding: 24px 24px 22px;
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+}
+
+.columns-grid h4 {
+    margin: 0 0 14px;
+    font-family: var(--serif-cn);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid var(--line);
+}
+
+.columns-grid p {
+    margin: 0;
+    font-family: var(--serif-cn);
+    font-size: 14.5px;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+}
+
+.articles-grid {
+    margin-top: clamp(48px, 7vw, 88px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+@media (max-width: 900px) { .articles-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .articles-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.article {
+    margin: 0;
+    aspect-ratio: 3 / 5;
+    background: var(--bg-soft);
+    border: 1px solid var(--line-soft);
+    overflow: hidden;
+}
+
+.article-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+}
+
+.article-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: object-position 6s linear;
+}
+
+.article-img:hover img {
+    object-position: bottom;
+}
+
+.articles-cta {
+    margin: 40px 0 0;
+    font-family: var(--serif-cn);
+    font-size: 15px;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+}
+
+.articles-cta a {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color .25s ease, border-color .25s ease;
+}
+
+.articles-cta a:hover { color: var(--accent); border-color: var(--ink); }
+
+.stats {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 32px;
+    max-width: 38em;
+}
+
+.stats > div {
+    padding: 22px 4px 18px;
+    border-top: 1.5px solid var(--ink);
+    font-family: var(--serif-cn);
+    font-size: 14px;
+    color: var(--ink-mute);
+    letter-spacing: 0.04em;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stats > div span {
+    font-family: var(--serif-en);
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    line-height: 1;
+}
+
+/* ---------- PDF iframe (work-research) ---------- */
+
+.pdf-frame {
+    margin: clamp(48px, 7vw, 88px) auto 0;
+    max-width: 1040px;
+    aspect-ratio: 4 / 5;
+    background: var(--bg-soft);
+    border: 1px solid var(--line-soft);
+    overflow: hidden;
+}
+
+.pdf-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
 }
 
 /* ---------- Colophon ---------- */
@@ -231,28 +459,29 @@
 
 .colophon-list > div {
     display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 24px;
+    grid-template-columns: 130px 1fr;
+    gap: 28px;
     align-items: baseline;
-    padding-bottom: 14px;
+    padding-bottom: 16px;
     border-bottom: 1px dashed var(--line-soft);
 }
 
 .colophon-list dt {
-    font-family: var(--serif-en);
-    font-style: italic;
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink-mute);
+    font-family: var(--serif-cn);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
 }
 
 .colophon-list dd {
     margin: 0;
-    font-size: 14.5px;
+    font-family: var(--serif-cn);
+    font-size: 15.5px;
+    font-weight: 400;
     color: var(--ink);
-    letter-spacing: 0.05em;
-    line-height: 1.8;
+    letter-spacing: 0.02em;
+    line-height: 1.85;
 }
 
 .work-back {
